@@ -46,3 +46,54 @@ body {
 a {
   color: black;
 }
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+.display-images {
+  margin: 1em 0 5em 0;
+}
+
+.work-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+  margin: 1em;
+}
+
+.showcase-pair {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  padding: 0 2em;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.showcase-pair img {
+  height: 100vh;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .showcase-pair {
+    flex-direction: column;
+    padding: 0 1em;
+  }
+
+  .showcase-pair img {
+    width: 100%;
+    height: auto;
+  }
+}
