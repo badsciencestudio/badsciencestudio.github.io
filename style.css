@@ -1,12 +1,55 @@
+/* ─── Reset ─── */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ─── Global ─── */
+
 body {
   overflow-x: hidden;
+  font-family: 'IBM Plex Mono', monospace;
 }
+
+a {
+  color: black;
+}
+
+footer {
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/* ─── Page layout ─── */
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3em;
+}
+
+/* ─── Site navigation ─── */
+
+.site-nav {
+  padding: 2em 0 1.5em 0;
+}
+
+.site-nav a {
+  font-weight: 500;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  font-style: italic;
+}
+
+/* ─── Index homepage ─── */
 
 .image-container {
   width: 100%;
@@ -28,73 +71,123 @@ body {
   top: 50%;
   left: 2.5em;
   transform: translateY(-50%);
-  font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
-  font-size: 2.2em;
+  font-size: 2.5em;
   color: black;
   white-space: nowrap;
   text-align: left;
 }
 
-.subtitle {
+.home-tagline {
   font-size: 0.35em;
   font-weight: 400;
   margin-top: 0.3em;
 }
 
+/* ─── Work pages ─── */
 
-a {
-  color: black;
-}
-
-footer {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 1em;
-  text-align: center;
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 400;
-  font-size: 0.8em;
-}
-
-.display-images {
-  margin: 1em 0 5em 0;
-}
-
-.work-title {
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 500;
-  font-size: 2em;
-  width: 100%;
-  text-align: center;
-  margin: 1em;
-}
-
-.showcase-pair {
+.work-header {
   display: flex;
   flex-direction: row;
-  gap: 2em;
-  padding: 0 2em;
-  align-items: stretch;
-  justify-content: center;
+  padding: 2em 0;
+  gap: 4em;
+  align-items: flex-start;
+  margin-bottom: 4em;
 }
 
-.showcase-pair img {
-  height: 100vh;
-  width: auto;
+.work-header-image {
+  flex: 0 0 35%;
+  max-width: 35%;
+}
+
+.work-header-image img {
+  width: 100%;
+  height: auto;
   display: block;
 }
 
+.work-text {
+  flex: 1;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.work-name {
+  font-weight: 500;
+  font-size: 2.2em;
+  margin-bottom: 0.2em;
+}
+
+.work-year {
+  font-size: 0.9em;
+  margin-bottom: 1.5em;
+}
+
+.artist-statement {
+  font-weight: 300;
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.artist-statement p {
+  margin-bottom: 1em;
+}
+
+.work-exhibitions {
+  margin-top: 3em;
+}
+
+.work-exhibitions-label {
+  font-weight: 600;
+  font-size: 0.8em;
+  margin-bottom: 0.4em;
+}
+
+.exhibition-entry {
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
+.img-gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 5em;
+}
+
+.img-gallery img {
+  height: 40vh;
+  width: auto;
+  display: block;
+  filter: grayscale(10%);
+}
+
+/* ─── Responsive ─── */
+
 @media (max-width: 1000px) {
-  .showcase-pair {
+  .work-header {
     flex-direction: column;
-    padding: 0 1em;
+    padding: 1em 0;
   }
 
-  .showcase-pair img {
+  .work-header-image {
+    flex: 0 0 100%;
+    max-width: 500px;
+  }
+
+  .img-gallery {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .img-gallery img {
     width: 100%;
     height: auto;
+    max-width: 400px;
   }
 }
 
