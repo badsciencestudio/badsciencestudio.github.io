@@ -153,6 +153,7 @@ footer {
 .img-gallery {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 2em;
   align-items: flex-start;
   justify-content: flex-start;
