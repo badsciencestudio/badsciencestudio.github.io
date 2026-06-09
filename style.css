@@ -17,6 +17,11 @@ a {
   color: inherit;
 }
 
+h1 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 footer {
   width: 100%;
   padding: 1em;
