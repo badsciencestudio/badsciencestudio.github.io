@@ -13,6 +13,7 @@
     <title>LAGU HANTU - BAD SCIENCE</title>
     <meta property="og:site_name" content="Bad Science">
     <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 
 <body>
@@ -43,7 +44,8 @@
         </div>
         <div class="img-gallery">
             <div class="media-credit-wrapper">
-                <video src="../img/laguhantu/laguhantu-preview.webm" alt="lagu hantu preview" loop autoplay muted></video>
+                <video id="lh-video" src="../img/laguhantu/laguhantu-preview.webm" alt="lagu hantu preview" loop autoplay muted></video>
+                <button class="mute-btn" onclick="(function(btn){var v=document.getElementById('lh-video');v.muted=!v.muted;btn.textContent=v.muted?'UNMUTE VIDEO':'MUTE VIDEO';})(this)">UNMUTE VIDEO</button>
                 <p class="media-credit">film: <a href="https://jeanpeic.github.io/">jean-peïc chou</a></p>
             </div>
             <img src="../img/laguhantu/teaser.jpg" alt="lagu hantu">
