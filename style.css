@@ -22,6 +22,19 @@ h1 {
   font-weight: inherit;
 }
 
+h2 {
+  font-weight: inherit;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
 footer {
   width: 100%;
   padding: 1em;
